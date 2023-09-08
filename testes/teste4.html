@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste 4</title>
+    <style>
+        body {
+            background-color: rgb(135, 74, 233);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+            font-size: 1.5em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        n1 = Number(window.prompt('Digite sua primeira nota: '))
+        n2 = Number(window.prompt('Digite sua segunda nota: '))
+        n3 = Number(window.prompt('Digite sua terceira nota: '))
+        n4 = Number(window.prompt('Digite sua Quarta nota: '))
+        ntotal = n1 + n2 + n3 + n4
+        nfinal = ntotal / 4
+        document.write(`Sua Notas são: <br> Primeiro Bimeste: ${n1} <br> Segundo Bimestre: ${n2} <br> Terceiro Bimestre: ${n3} <br> Quarto Bimestre: ${n4}<br><br>`)
+        document.write(`Sua media final é: ${nfinal.toFixed(1)}<br><br>`)
+        document.write(`${nfinal >= 7?'APROVADO':'REPROVADO'}`)
+    </script>
+</body>
+</html>
