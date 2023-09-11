@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treninado oque foi aprendido</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Treinando</h1>
+    <input type="number" id="num"> +
+    <input type="number" id="num2">
+    <input type="button" value="Somar" onclick="somar()">
+    <p id="res">resultado...</p>
+    <script>
+        function somar() {
+            nm1 = document.querySelector('#num')
+            nm2 = document.querySelector('#num2')
+            res = document.querySelector('#res')
+            n1 = Number(nm1.value)
+            n2 = Number(nm2.value)
+            s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} è igual a: ${s}`
+        }
+    </script>
+</body>
+</html>
