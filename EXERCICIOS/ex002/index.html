@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de idade</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <article>
+            <p>Ano de Nascimento: 
+                <input type="number" name="ano" id="ano" required min="4" max="5">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="sex" id="M" checked>
+                <label for="M">Masculino</label>
+                <input type="radio" name="sex" id="F">
+                <label for="F">Feminino</label>
+            </p>
+            <p>
+                <input id="verif" type="button" value="Verificar" onclick="verificar()">
+            </p>
+            <div id="msg">Preencha os dados acima para ver o resultado!</div>
+            <div ><img id="img" src="" alt=""></div>
+    </article>
+    <footer>
+        <h2>&copy; BraionFernandes</h2>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
