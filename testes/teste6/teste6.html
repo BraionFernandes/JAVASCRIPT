@@ -4,11 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treninado oque foi aprendido</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1></h1>
-    <script>
-
-    </script>
+    <header>
+        <h1>Formulario</h1>
+    </header>
+    <main>
+        <section class="cadastro">
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome">
+            </p>
+            <p>
+                <label for="idade">Idade:</label>
+                <input type="number" name="idade" id="idade">
+            </p>
+            <p>
+                Sexo:
+                <label for="M">Masculino</label>
+                <input type="radio" name="M" id="M">
+                <label for="F">Feminino</label>
+                <input type="radio" name="F" id="F">
+            </p>
+            <input id="enviar" type="button" value="Enviar" onclick="cadastro()">
+        </section>
+        <section class="media-escolar">
+            <p>
+                Primeira Nota:
+                <input type="number" name="n1" id="n1">
+            </p>
+            <p>
+                Segunda Nota:
+                <input type="number" name="n2" id="n2">
+            </p>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
