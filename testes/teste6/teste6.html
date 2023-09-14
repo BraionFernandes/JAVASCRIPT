@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Treninado oque foi aprendido</title>
+    <title>Teste 6</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,34 +12,53 @@
     </header>
     <main>
         <section class="cadastro">
+            <h2>Cadastro</h2>
             <p>
-                <label for="nome">Nome:</label>
+                Nome:
                 <input type="text" name="nome" id="nome">
             </p>
             <p>
-                <label for="idade">Idade:</label>
+                Idade:
                 <input type="number" name="idade" id="idade">
             </p>
             <p>
                 Sexo:
                 <label for="M">Masculino</label>
-                <input type="radio" name="M" id="M">
+                <input type="radio" name="sexo" id="M" checked>
                 <label for="F">Feminino</label>
-                <input type="radio" name="F" id="F">
+                <input type="radio" name="sexo" id="F">
             </p>
-            <input id="enviar" type="button" value="Enviar" onclick="cadastro()">
+            <div id="msg1">
+                Mensagem...
+            </div>
+            <input id="enviar" type="button" value="Enviar" onclick="enviar()">
         </section>
         <section class="media-escolar">
+            <h2>Media Escolar</h2>
+
             <p>
-                Primeira Nota:
+                Primeira nota:
                 <input type="number" name="n1" id="n1">
             </p>
             <p>
-                Segunda Nota:
+                Segunda nota:
                 <input type="number" name="n2" id="n2">
             </p>
+            <p>
+                Terceira nota:
+                <input type="number" name="n3" id="n3">
+            </p>
+            <p>
+                Quarta nota:
+                <input type="number" name="n4" id="n4">
+            </p>
+            <div id="media">
+                Media = 0
+            </div>
+            <input id="enviar1" type="button" value="Enviar" onclick="escola()">
         </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
