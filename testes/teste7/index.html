@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Restaurante</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Faça seu pedido:</h2>
+        </section>
+        <section>
+            <div>
+                <p id="lanche">
+                    Lanche: 
+                    <input type="radio" name="lanchef" id="lanche1" checked><label for="lanche1">Sanduiche Natural</label>
+                    <input type="radio" name="lanchef" id="lanche2"><label for="lanche2">Coxinha de Frango</label>
+                    <input type="radio" name="lanchef" id="lanche3"><label for="lanche3">Pizza</label>
+                    <input type="radio" name="lanchef" id="lanche4"><label for="lanche4">Lasanha</label>
+                </p>
+                <p id="bebida">
+                    Bebida: <input type="radio" name="bebidaf" id="bebida1" checked><label for="bebida1">Coca-Cola</label>
+                    <input type="radio" name="bebidaf" id="bebida2"><label for="bebida2">Pepsi</label>
+                    <input type="radio" name="bebidaf" id="bebida3"><label for="bebida3">Suco de uva</label>
+                    <input type="radio" name="bebidaf" id="bebida4"><label for="bebida4">Suco de maracuja</label>
+                </p>
+                <input id="enviarp" type="button" value="Enviar" onclick="enviarp()">
+            </div>
+            <div id="pedidos">
+            </div>
+            <div>
+                <input id="confirmarp" type="button" value="Confirmar" onclick="confirmarp()">
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
