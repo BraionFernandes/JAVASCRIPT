@@ -9,6 +9,7 @@ const tarefa={
     addTarefa:function(novaTarefa,destinoDOM){
         const taf={
             nome:novaTarefa.nome,
+            id:novaTarefa.id
         }
         tarefas.push(taf);
 
@@ -16,7 +17,8 @@ const tarefa={
 
         tarefas.forEach((t) => {
             const div=document.createElement("div");
-            div.setAttribute("class",`tarefa aFazer`);
+            div.setAttribute("class","tarefa aFazer");
+            div.setAttribute("id", `${t.id}`)
             const p=document.createElement("p");
             p.innerHTML=t.nome;
             const divBtn=document.createElement("div");
@@ -46,27 +48,27 @@ const tarefa={
             });
 
             btnEditar.addEventListener("click",()=>{
-                const divEditor=document.querySelector(".editor");
+                const editor=document.querySelector(".editor");
                 const tarefaEditar=document.querySelector(".tarefaEditar");
+                editor.classList.remove("hidden");
                 tarefaEditar.appendChild(div);
                 p.classList.add("editando");
                 div.classList.add("divEditando");
                 btnEditar.parentElement.classList.add("hidden");
-                // const newTarefas=tarefas.filter((i)=>{
-                //     return i["id"] !== div.classList[2];
-                // });
-                // tarefas.length=0;
-                // tarefas.push(...newTarefas);
+                const newTarefas=tarefas.filter((el)=>{
+                    return el["id"] != div.id;
+                });
+                console.log(newTarefas);
+                tarefas.length=0;
+                tarefas.push(...newTarefas);
             });
             btnExcluir.addEventListener("click" ,()=>{
-                console.log(tarefas)
-                const newTarefas=tarefas.filter((i)=>{
-                    return i["nome"] !== p.innerHTML;
-                });
+                const newTarefas=tarefas.filter((el)=>{
+                    return el["id"] != div.id
+                })
                 tarefas.length=0;
                 tarefas.push(...newTarefas);
                 div.remove();
-                console.log(tarefas)
             })
         })
     }
