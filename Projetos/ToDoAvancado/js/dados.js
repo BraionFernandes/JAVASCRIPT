@@ -48,8 +48,10 @@ const tarefa={
             });
 
             btnEditar.addEventListener("click",()=>{
+                const lista=document.querySelector("#lista");
                 const editor=document.querySelector(".editor");
                 const tarefaEditar=document.querySelector(".tarefaEditar");
+                lista.classList.add("hidden");
                 editor.classList.remove("hidden");
                 tarefaEditar.appendChild(div);
                 p.classList.add("editando");

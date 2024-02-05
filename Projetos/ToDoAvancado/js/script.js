@@ -25,6 +25,7 @@ btnCriar.addEventListener("click",()=>{
     tarefasAll.push(...tarefasRegistradas.children);
 })
 btnEditor.addEventListener("click",()=>{
+    const lista=document.querySelector("#lista");
     const tarefasRegistradas=document.getElementById("tarefasRegistradas");
     const editor=document.querySelector(".editor");
     const divEditando=document.querySelector(".divEditando");
@@ -39,6 +40,7 @@ btnEditor.addEventListener("click",()=>{
     divEditando.classList.remove("divEditando");
     p.classList.remove("editando");
     editor.classList.add("hidden");
+    lista.classList.remove("hidden");
 })
 btnTodas.addEventListener("click",()=>{
     btnFiltros.forEach(el=>{
